@@ -1,17 +1,15 @@
 package main
 
-import "fmt"
-
 func main() {
 	// var card string = "Ace of Spades"
-	cards := []string{"Ace of Diamonds", newCard()} //:= Use when assigning new variable, first time declaration
-	cards = append(cards, "Six of Spades")
+	//cards := newDeck() //:= Use when assigning new variable, first time declaration
+	//cards.saveToFile("my_cards")
+	cards := newDeck()
+	cards.shuffle()
+	cards.print()
 
-	for i, card := range cards {
-		fmt.Println(i, card)
-	}
-}
+	//hand, remainingCards := deal(cards, 5)
 
-func newCard() string {
-	return "Five of Diamonds"
+	//hand.print()
+	//remainingCards.print()
 }
