@@ -34,8 +34,9 @@ func main() {
 			zipCode: 94000,
 		},
 	}
-	jimPointer := &jim
-	jimPointer.updateName("John")
+	// & will give the address of the value this variable is pointing at
+	// * give the value from that memory address
+	jim.updateName("John")
 	// print result after update with pointer
 	jim.print()
 }
@@ -44,6 +45,7 @@ func (p person) print() {
 	fmt.Printf("%+v", p)
 }
 
+// For define type positions *variable_name meaning is pointer type
 func (pointerToPerson *person) updateName(newFirstName string) {
 	(*pointerToPerson).firstName = newFirstName
 }
