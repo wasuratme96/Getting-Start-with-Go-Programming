@@ -36,6 +36,7 @@ func main() {
 	}
 	// & will give the address of the value this variable is pointing at
 	// * give the value from that memory address
+
 	jim.updateName("John")
 	// print result after update with pointer
 	jim.print()
